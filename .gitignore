@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.so
+venv/
+env/
+outputs/
+data/
+checkpoints/
+*.npz
+*.pkl
+*.pth
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+.env
+*.log

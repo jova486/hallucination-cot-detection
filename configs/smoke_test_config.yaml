@@ -1,0 +1,26 @@
+experiment:
+  name: "smoke_test_gsm8k"
+  output_dir: "./outputs/smoke_test"
+  random_seed: 42
+
+model:
+  name: "meta-llama/Meta-Llama-3-8B-Instruct"
+  device: "cuda"
+  dtype: "float16"
+
+dataset:
+  name: "gsm8k"
+  n_samples: 100
+
+generation:
+  max_steps: 10
+  max_tokens_per_step: 150
+
+verification:
+  model: "gpt-4o-mini"
+  confidence_threshold: 70
+  use_json_mode: true
+
+training:
+  test_fraction: 0.2
+  cv_folds: 5
