@@ -38,7 +38,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     
     print("\n[1/5] Loading dataset...")
-    ds = load_dataset("gsm8k", split="train[:100]")
+    ds = load_dataset("gsm8k", "main", split="train[:100]")
     
     print("\n[2/5] Generating CoT...")
     gen = IncrementalCoTGenerator("meta-llama/Meta-Llama-3-8B-Instruct")
