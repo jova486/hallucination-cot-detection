@@ -66,7 +66,7 @@ Step {step_num}:'''
             "n_steps": len(step_data)
         }
     
-    def _generate_single_step(self, prompt: str, max_tokens: int = 150) -> Optional[Dict]:
+    def _generate_single_step(self, prompt: str, max_tokens: int = 50) -> Optional[Dict]:
         inputs = self.tokenizer(prompt, return_tensors="pt").to(self.device)
         step_tokens = []
         step_logprobs = []
